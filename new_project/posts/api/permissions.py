@@ -9,4 +9,4 @@ class IdAdminOrReadOnly(BasePermission):
             return True
         
         else:    
-            return request.user.is_staff #Aqui retornamos false si el usuario no es adimnistrador
+            return request.user.is_staff #Aqui retornamos false si el usuario no es adimnistradorN

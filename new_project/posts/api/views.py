@@ -13,8 +13,8 @@ class PostModelViewSet(ModelViewSet):
     permission_classes=[IdAdminOrReadOnly] 
     serializer_class = PostSerializer
     queryset = Post.objects.all()
-    #Puedo elegir que solo nos muestre y nos permita un método
-    http_method_names=['get']
+    #Puedo elegir que solo nos muestre y nos permita un método o especificar eso
+    #http_method_names=['get','post']
     #Vamos a ver el tema de los permisos
     
     
