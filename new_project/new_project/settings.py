@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+import datetime
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -79,8 +79,11 @@ WSGI_APPLICATION = 'new_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'USER': 'ugvwkctvgjjtyr',
+        'NAME' : 'd6tc6ituo3lp2b',
+        'PASSWORD' : '01de12b8790f9047a1ae0f8751b03e251bb925ec030e937beb7f5c0596ecde1c',
+        'HOST' : 'ec2-52-21-136-176.compute-1.amazonaws.com'
     }
 }
 
@@ -110,6 +113,10 @@ REST_FRAMEWORK = {
     )
 }
 
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME':datetime.timedelta(minutes=60),
+    'REFRESH_TOKEN_LIFETIME':datetime.timedelta(days=7)
+}
 
 
 # Internationalization
